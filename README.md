@@ -21,27 +21,17 @@
 - Applied domain: **crypto market automation** — exchange market-data ingestion, signal detection, and the billing that turns an AI system into a product
 - Bias toward the unglamorous parts: reconnect/backoff logic, idempotent webhooks, append-only ledgers, rate limiting
 
-## 🧭 Projects at a glance
+## 🔬 Featured project
 
-<!-- Keep this table in sync with the sections below.
-     If a private repo ever goes public: link the name and change its Status to "Public".
-     New row template:
-     | **[name](https://github.com/The2oser-dev/name)** | One-liner | Stack | **Public** |
+<!-- Template for adding a new project section:
+### [name](https://github.com/The2oser-dev/name)
+*One-liner.*
+**Problem.** ...
+**Approach.** ...
+**Stack.** `...` · `...`
 -->
 
-| Project | One-liner | Stack | Status |
-|:--|:--|:--|:--:|
-| **[TokenEater](https://github.com/The2oser-dev/TokenEater)** | Multi-agent LLM pipeline with automatic answer verification | Python · OpenRouter | **Public** |
-| **signal-hub** | Event-driven crypto trading-signals platform | Go · Python · NATS · TimescaleDB | Private |
-| **fyra-portal** | Multi-model AI chat portal with credit-ledger billing | TypeScript · Next.js · Prisma | Private |
-| **scanner** | Web-app vulnerability scanner with a Telegram front-end | Python | Private |
-| **MyCryBot** | Bybit futures anomaly scanner — alert-only | Python · asyncio | Private |
-
-Details on the three main systems below; the rest live in [the lab](#-in-the-lab).
-
-## 🔬 Case studies
-
-### [TokenEater](https://github.com/The2oser-dev/TokenEater) · Public
+### [TokenEater](https://github.com/The2oser-dev/TokenEater)
 
 *Experimental multi-agent LLM pipeline with automatic answer verification.*
 
@@ -52,62 +42,6 @@ Details on the three main systems below; the rest live in [the lab](#-in-the-lab
 **Stack.** `Python` · `OpenAI SDK → OpenRouter` · `free-tier model pool`
 
 *Status: a working experiment and my sandbox for orchestration ideas — currently being hardened (packaging, bounded retries, explicit clarification handling).*
-
-### signal-hub · Private
-<!-- if this repo ever goes public, replace the heading above with:
-### [signal-hub](https://github.com/The2oser-dev/signal-hub) · Public
-and update the table row -->
-
-*Event-driven crypto trading-signals platform.*
-
-**Problem.** Funding-rate arbitrage and volume anomalies are only visible if you watch many markets at once, in real time — a signal delivered late is worthless.
-
-**Approach.** Go collectors hold WebSocket connections to exchange feeds — per-connector backoff, read deadlines, per-symbol throttling — and stream market data into NATS. Strategy engines subscribe to detect funding-rate arbitrage (normalized across different funding intervals) and volume anomalies (z-score detection with cooldowns and dedup). A FastAPI backend, a Next.js web app, and a Telegram bot deliver signals with plan-based access, Stripe billing, and a referral program.
-
-**Stack.** `Go` · `Python / FastAPI` · `TypeScript / Next.js` · `NATS` · `TimescaleDB` · `Redis` · `Docker Compose`
-
-### fyra-portal · Private
-<!-- if this repo ever goes public, replace the heading above with:
-### [fyra-portal](https://github.com/The2oser-dev/fyra-portal) · Public
-and update the table row -->
-
-*Multi-model AI chat portal where the hard part is the metering.*
-
-**Problem.** Selling LLM access is mostly a billing problem: every streamed token has to be counted, priced, and settled — without drift, and without trusting the client.
-
-**Approach.** SSE-streamed chat proxied through an OpenAI-compatible upstream, with usage accumulated server-side while deltas stream to the browser. Per-token credit accounting on an append-only ledger, updated in the same transaction as the cached balance. Crypto subscription payments with signature-verified, idempotent webhooks and a raw-payload audit log. Session tokens stored only as hashes; rate limiting on auth routes.
-
-**Stack.** `TypeScript` · `Next.js (App Router)` · `React` · `Prisma` · `Redis` · `Zod` · `Tailwind CSS`
-
-## 🧪 In the lab
-
-Smaller private projects, in brief:
-
-<details>
-<summary><b>scanner</b> — web-application security scanner with a Telegram front-end · Python</summary>
-
-<br>
-
-Checks security headers, TLS, technology/CVE fingerprinting, and exposed secrets, and runs common injection probes — with TXT/HTML reports delivered through a bilingual Telegram front-end. For authorized targets only.
-
-**Stack.** `Python` · `requests` · `python-telegram-bot`
-
-<!-- if this repo ever goes public: link the name in the summary to https://github.com/The2oser-dev/scanner -->
-
-</details>
-
-<details>
-<summary><b>MyCryBot</b> — Bybit futures anomaly scanner, alert-only by design · Python / asyncio</summary>
-
-<br>
-
-Async scanner for Bybit USDT perpetuals: flags pump/dump moves using multi-timeframe RSI plus order-book and open-interest context, and sends Telegram alerts. It never places trades.
-
-**Stack.** `Python` · `asyncio` · `pandas`
-
-<!-- if this repo ever goes public: link the name in the summary to the repo -->
-
-</details>
 
 ## 🛠️ How I build
 
@@ -121,7 +55,6 @@ Async scanner for Bybit USDT perpetuals: flags pump/dump moves using multi-timef
 <!-- keep this section current or delete it — a stale "Now" is worse than none -->
 
 - Hardening **TokenEater**: packaging, bounded retries, explicit clarification handling
-- Building in private — the interesting parts get written up here
 
 <sub>Updated July 2026</sub>
 
@@ -140,4 +73,4 @@ Async scanner for Bybit USDT perpetuals: flags pump/dump moves using multi-timef
 
 ---
 
-<div align="center"><sub>Account started August 2025 — new profile, existing codebase. Most of the work is private; the write-ups above cover what the code does. GitHub is the only channel for now.</sub></div>
+<div align="center"><sub>Account started August 2025. GitHub is the only channel for now.</sub></div>
