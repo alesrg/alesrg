@@ -2,7 +2,7 @@
 
 # The2oser
 
-### I build LLM agent pipelines that check their own work — and trading infrastructure to point them at.
+### Engineering behind the scenes: event-driven backends, payments that reconcile, and systems built to keep running вЂ” with LLM agents as one tool among many.
 
 <br>
 
@@ -17,48 +17,47 @@
 
 ---
 
-- Core focus: **multi-agent LLM orchestration** — planner / worker / verifier loops, strict JSON contracts between agents, critique-and-retry when an output fails verification
-- Applied domain: **crypto market automation** — exchange market-data ingestion, signal detection, and the billing that turns an AI system into a product
-- Bias toward the unglamorous parts: reconnect/backoff logic, idempotent webhooks, append-only ledgers, rate limiting
+- **What I build:** backend systems that process data and money end-to-end вЂ” market-data ingestion, signal detection, and the billing layer that turns an automated system into a product.
+- **How:** event-driven architecture on a message bus, typed contracts between services, and the unglamorous guarantees that make automation safe to leave running вЂ” reconnect/backoff, idempotent webhooks, append-only ledgers, rate limiting, payment reconciliation.
+- **AI where it earns it:** LLM agents as a component inside pipelines (planner / worker / verifier) вЂ” not the whole story, just another service in the system.
 
-## 🔬 Featured project
+## рџљЂ Featured projects
 
 <!-- Template for adding a new project section:
 ### [name](https://github.com/The2oser-dev/name)
 *One-liner.*
 **Problem.** ...
 **Approach.** ...
-**Stack.** `...` · `...`
+**Stack.** `...` В· `...`
 -->
 
 ### [TokenEater](https://github.com/The2oser-dev/TokenEater)
 
-*Experimental multi-agent LLM pipeline with automatic answer verification.*
+*An experimental multi-stage pipeline where LLM agents cooperate as a team вЂ” a hands-on sandbox for orchestration and reliable automation.*
 
-**Problem.** A single LLM call on a complex request fails in unpredictable ways — and free-tier models fail more often than most. Blind retries don't help when nothing checks *what* went wrong.
+**Problem.** A single LLM call on a complex request fails in unpredictable ways, and free-tier models fail more often than most. Blind retries don't help when nothing checks *what* went wrong вЂ” the same reliability problem you meet in any distributed system.
 
-**Approach.** A gatekeeper decides whether the request needs decomposition, a planner splits it into subtasks, worker agents (each drawing a model from a pool of free OpenRouter models) execute them, and a verifier grades every output against explicit criteria — feeding its critique back to the worker until the subtask passes, before final assembly. Agents communicate through strict JSON contracts, with defensive parsing for the ways models actually misbehave (markdown-fenced JSON included).
+**Approach.** A gatekeeper decides whether the request needs decomposition, a planner splits it into subtasks, worker agents (each drawing a model from a pool of free OpenRouter models) execute them, and a verifier grades every output against explicit criteria вЂ” feeding critique back to the worker until it passes, before final assembly. Agents communicate through strict JSON contracts, with defensive parsing for the ways models actually misbehave (markdown-fenced JSON included). Structurally, it's the same contract-and-verify pattern I'd use between any two services.
 
-**Stack.** `Python` · `OpenAI SDK → OpenRouter` · `free-tier model pool`
+**Stack.** `Python` В· `OpenAI SDK в†’ OpenRouter` В· `free-tier model pool`
 
-*Status: a working experiment and my sandbox for orchestration ideas — currently being hardened (packaging, bounded retries, explicit clarification handling).*
+*Status: a working experiment and my sandbox for orchestration ideas. More projects in other stacks are being published.*
 
-## 🛠️ How I build
+## рџ› пёЏ How I build
 
-- **Verify, then trust.** Model output gets graded against explicit criteria and retried with critique — not accepted on the first pass.
-- **Contracts between components.** Strict JSON schemas at agent boundaries, and defensive parsing for real-world API and model quirks.
-- **Events over polling.** Market data moves through a message bus so collectors, strategies, and delivery can evolve independently.
-- **Build the boring parts well.** Webhook signature verification, append-only ledgers, reconnect/backoff logic — the code that makes an automated system safe to leave running.
+- **Contract-first.** Every service boundary speaks strict, typed contracts вЂ” parsed defensively against the real world, whether that's a flaky API or a misbehaving model.
+- **Events over polling.** Data flows through a message bus so collectors, strategies, and delivery can evolve independently.
+- **Reliability by default.** Reconnect/backoff, idempotent webhooks, append-only ledgers, and reconciliation вЂ” the code that lets an automated system run unattended.
+- **Verify, then trust.** Output gets graded and retried with critique вЂ” never accepted on the first pass.
 
-## 📌 Now
+## рџ“Њ Now
 
-<!-- keep this section current or delete it — a stale "Now" is worse than none -->
+- Hardening **TokenEater** (packaging, bounded retries, explicit clarification handling)
+- Building the next public projects in other stacks to round out the portfolio
 
-- Hardening **TokenEater**: packaging, bounded retries, explicit clarification handling
+<sub>Updated August 2026</sub>
 
-<sub>Updated July 2026</sub>
-
-## 🧰 Toolbox
+## рџ§° Toolbox
 
 <div align="center">
 
@@ -66,10 +65,11 @@
 
 </div>
 
-**Languages** — Python · TypeScript · Go<br>
-**LLM & agents** — OpenAI-compatible APIs · OpenRouter · multi-agent orchestration · structured-output prompting · verification loops<br>
-**Backend & data** — FastAPI · Next.js · Prisma · NATS · Redis · PostgreSQL / TimescaleDB · pandas<br>
-**Infra & payments** — Docker Compose · Stripe · NOWPayments
+**Languages** вЂ” Python В· TypeScript В· Go<br>
+**Backend & systems** вЂ” FastAPI В· event-driven architecture В· message buses (NATS) В· Redis В· PostgreSQL / TimescaleDB В· Docker<br>
+**Web & product** вЂ” React В· Next.js В· Tailwind В· Prisma<br>
+**AI & agents** вЂ” OpenAI-compatible APIs В· OpenRouter В· multi-agent orchestration В· verification loops<br>
+**Infra & payments** вЂ” Docker Compose В· Stripe В· NOWPayments В· reconciliation
 
 ---
 
