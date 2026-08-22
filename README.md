@@ -87,17 +87,9 @@ Web dashboard for token usage collected from local AI tools (Hermes, OpenCode). 
 
 ## GitHub Stats
 
-<table width="100%">
-<tr>
-<td width="33%" align="center" valign="middle"><img src="https://raw.githubusercontent.com/alesrg/alesrg/main/profile-summary-card-output/tokyonight/0-profile-details.svg" width="100%" alt="profile details"/></td>
-<td width="34%" align="center" valign="middle"><img src="https://raw.githubusercontent.com/alesrg/alesrg/main/profile-summary-card-output/tokyonight/3-stats.svg" width="100%" alt="stats"/></td>
-<td width="33%" align="center" valign="middle"><img src="https://raw.githubusercontent.com/alesrg/alesrg/main/profile-summary-card-output/tokyonight/4-productive-time.svg" width="100%" alt="productive time"/></td>
-</tr>
-<tr>
-<td width="50%" align="center" valign="middle"><img src="https://raw.githubusercontent.com/alesrg/alesrg/main/profile-summary-card-output/tokyonight/1-repos-per-language.svg" width="92%" alt="repos per language"/></td>
-<td width="50%" align="center" valign="middle"><img src="https://raw.githubusercontent.com/alesrg/alesrg/main/profile-summary-card-output/tokyonight/2-most-commit-language.svg" width="92%" alt="most commit language"/></td>
-</tr>
-</table>
+<img src="https://raw.githubusercontent.com/alesrg/alesrg/main/profile-summary-card-output/nord_dark/0-profile-details.svg" width="100%" alt="profile details"/>
+
+<table width="100%"><tr><td width="50%" align="center" valign="middle"><img src="https://raw.githubusercontent.com/alesrg/alesrg/main/profile-summary-card-output/nord_dark/1-repos-per-language.svg" width="98%" alt="repos per language"/></td><td width="50%" align="center" valign="middle"><img src="https://raw.githubusercontent.com/alesrg/alesrg/main/profile-summary-card-output/nord_dark/2-most-commit-language.svg" width="98%" alt="most commit language"/></td></tr><tr><td width="50%" align="center" valign="middle"><img src="https://raw.githubusercontent.com/alesrg/alesrg/main/profile-summary-card-output/nord_dark/3-stats.svg" width="98%" alt="stats"/></td><td width="50%" align="center" valign="middle"><img src="https://raw.githubusercontent.com/alesrg/alesrg/main/profile-summary-card-output/nord_dark/4-productive-time.svg" width="98%" alt="productive time"/></td></tr></table>
 <br>
 
 <img src="https://raw.githubusercontent.com/alesrg/alesrg/output/github-snake-dark.svg" alt="contribution snake" width="100%"/>
