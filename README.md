@@ -87,14 +87,14 @@ Web dashboard for token usage collected from local AI tools (Hermes, OpenCode). 
 
 ## GitHub Stats
 
-<img width="32%" src="https://raw.githubusercontent.com/alesrg/alesrg/main/profile-summary-card-output/github-dark/profile-details.svg" alt="profile details"/>
-<img width="32%" src="https://raw.githubusercontent.com/alesrg/alesrg/main/profile-summary-card-output/github-dark/stats.svg" alt="stats"/>
-<img width="32%" src="https://raw.githubusercontent.com/alesrg/alesrg/main/profile-summary-card-output/github-dark/productive-time.svg" alt="productive time"/>
+<img width="32%" src="https://raw.githubusercontent.com/alesrg/alesrg/main/profile-summary-card-output/tokyonight/0-profile-details.svg" alt="profile details"/>
+<img width="32%" src="https://raw.githubusercontent.com/alesrg/alesrg/main/profile-summary-card-output/tokyonight/3-stats.svg" alt="stats"/>
+<img width="32%" src="https://raw.githubusercontent.com/alesrg/alesrg/main/profile-summary-card-output/tokyonight/4-productive-time.svg" alt="productive time"/>
 
 <br>
 
-<img width="42%" src="https://raw.githubusercontent.com/alesrg/alesrg/main/profile-summary-card-output/github-dark/repos-per-language.svg" alt="repos per language"/>
-<img width="42%" src="https://raw.githubusercontent.com/alesrg/alesrg/main/profile-summary-card-output/github-dark/most-commit-language.svg" alt="most commit language"/>
+<img width="42%" src="https://raw.githubusercontent.com/alesrg/alesrg/main/profile-summary-card-output/tokyonight/1-repos-per-language.svg" alt="repos per language"/>
+<img width="42%" src="https://raw.githubusercontent.com/alesrg/alesrg/main/profile-summary-card-output/tokyonight/2-most-commit-language.svg" alt="most commit language"/>
 
 <br>
 
