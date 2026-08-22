@@ -81,26 +81,20 @@ Web dashboard for token usage collected from local AI tools (Hermes, OpenCode). 
 </tr>
 </table>
 
-## How I think about it
-
-- **Contract-first.** Every boundary — between services or between agents — speaks strict typed contracts, parsed defensively against the way things *actually* misbehave.
-- **Local-first.** Your account, your keys, your data on your disk. Infrastructure should be boring and dependable, not a SaaS subscription.
-- **Verification over vibes.** Models fail more often than code does; blind retries don't fix that. Check *what* broke, critique, retry — then assemble.
-
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:7aa2f7,100:1a1b27&height=3" width="100%" alt=""/>
 
 <div align="center">
 
 ## GitHub Stats
 
-<img width="32%" src="https://raw.githubusercontent.com/alesrg/alesrg/output/github-profile-summary-cards/github-dark/profile-details.svg" alt="profile details"/>
-<img width="32%" src="https://raw.githubusercontent.com/alesrg/alesrg/output/github-profile-summary-cards/github-dark/stats.svg" alt="stats"/>
-<img width="32%" src="https://raw.githubusercontent.com/alesrg/alesrg/output/github-profile-summary-cards/github-dark/productive-time.svg" alt="productive time"/>
+<img width="32%" src="https://raw.githubusercontent.com/alesrg/alesrg/main/profile-summary-card-output/github-dark/profile-details.svg" alt="profile details"/>
+<img width="32%" src="https://raw.githubusercontent.com/alesrg/alesrg/main/profile-summary-card-output/github-dark/stats.svg" alt="stats"/>
+<img width="32%" src="https://raw.githubusercontent.com/alesrg/alesrg/main/profile-summary-card-output/github-dark/productive-time.svg" alt="productive time"/>
 
 <br>
 
-<img width="42%" src="https://raw.githubusercontent.com/alesrg/alesrg/output/github-profile-summary-cards/github-dark/repos-per-language.svg" alt="repos per language"/>
-<img width="42%" src="https://raw.githubusercontent.com/alesrg/alesrg/output/github-profile-summary-cards/github-dark/most-commit-language.svg" alt="most commit language"/>
+<img width="42%" src="https://raw.githubusercontent.com/alesrg/alesrg/main/profile-summary-card-output/github-dark/repos-per-language.svg" alt="repos per language"/>
+<img width="42%" src="https://raw.githubusercontent.com/alesrg/alesrg/main/profile-summary-card-output/github-dark/most-commit-language.svg" alt="most commit language"/>
 
 <br>
 
